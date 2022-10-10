@@ -1,0 +1,16 @@
+.container {
+}
+
+.container div {
+}
+
+.container div label {
+  display: block;
+}
+
+.container div textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+}

@@ -1,34 +1,24 @@
+import React from "react";
+
 import { Header } from "./components/Header";
 import { Container } from "./components/Container";
+import { ThemeContext, ThemeContextType } from "./contexts/ThemeContext";
+
+import styles from "./index.module.css";
+import { ReplaceFields } from "./components/ReplaceFields";
+import { TextAreasContainer } from "./components/TextAreasContainer";
 
 function App() {
+  const { theme } = React.useContext(ThemeContext) as ThemeContextType;
+
   return (
-    <>
+    <div className={theme === "light" ? styles.light : styles.dark}>
       <Header />
       <Container>
-        <h1>Troque caracteres por outros</h1>
-        <div style={{ display: "flex", gap: "2rem" }}>
-          <div>
-            <label htmlFor="">Entrada</label>
-            <input type="text" />
-          </div>
-          <div>
-            <label htmlFor="">Saída</label>
-            <input type="text" />
-          </div>
-        </div>
-        <div>
-          <div>
-            <label htmlFor="">texto de entrada</label>
-            <textarea name="" id="" cols={30} rows={10}></textarea>
-          </div>
-          <div>
-            <label htmlFor="">texto de saída</label>
-            <textarea name="" id="" cols={30} rows={10}></textarea>
-          </div>
-        </div>
+        <ReplaceFields />
+        <TextAreasContainer />
       </Container>
-    </>
+    </div>
   );
 }
 

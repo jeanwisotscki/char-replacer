@@ -14,6 +14,15 @@ function App() {
     <div className={theme === "light" ? styles.light : styles.dark}>
       <Header />
       <Container>
+        <h2>Substitua um ou mais caracteres por outros</h2>
+        <strong>Como usar?</strong>
+        <p>
+          Adicione o caractere ou a sequência de caracteres a serem substituídos
+          no campo <strong>"Entrada"</strong>, em seguida, adicione os que vão
+          substitui-los no campo <strong>"Saída"</strong>. Feito! Agora basta
+          digitar o seu texto no campo "Texto de entrada" e o resultado será
+          apresentado em tempo real no campo "Texto de saída".
+        </p>
         <Forms />
       </Container>
     </div>

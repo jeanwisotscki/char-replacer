@@ -4,14 +4,15 @@ import toast, { Toaster } from "react-hot-toast";
 import styles from "./index.module.css";
 
 export const Forms = () => {
-  const [enterText, setEnterText] = React.useState("");
   const [inputChars, setInputChars] = React.useState("");
   const [outputChars, setOutputChars] = React.useState("");
+  const [enteredText, setEnteredText] = React.useState("");
+  const replacedText = enteredText.split(inputChars).join(outputChars);
 
-  const clearAllInputs = () => {
-    setEnterText("");
+  const clearAll = () => {
     setInputChars("");
     setOutputChars("");
+    setEnteredText("");
   };
 
   const copyToClipboard = (text: string) => {
@@ -22,8 +23,6 @@ export const Forms = () => {
   return (
     <>
       <Toaster />
-
-      <h2>Troque caracteres por outros</h2>
 
       <section className={styles.inputFields}>
         <div>
@@ -55,12 +54,12 @@ export const Forms = () => {
           <textarea
             id="texto-entrada"
             placeholder="abacate"
-            value={enterText}
-            onChange={(e) => setEnterText(e.target.value)}
+            value={enteredText}
+            onChange={(e) => setEnteredText(e.target.value)}
           />
 
           <button
-            onClick={() => copyToClipboard(enterText)}
+            onClick={() => copyToClipboard(enteredText)}
             title="Copiar texto do campo"
           >
             Copiar
@@ -69,15 +68,9 @@ export const Forms = () => {
 
         <div>
           <label>Texto de saída</label>
-          <textarea
-            placeholder="aaabaaacaaate"
-            value={enterText.split(inputChars).join(outputChars)}
-            readOnly
-          />
+          <textarea placeholder="aaabaaacaaate" value={replacedText} readOnly />
           <button
-            onClick={() =>
-              copyToClipboard(enterText.split(inputChars).join(outputChars))
-            }
+            onClick={() => copyToClipboard(replacedText)}
             title="Copiar texto do campo"
           >
             Copiar
@@ -85,7 +78,7 @@ export const Forms = () => {
         </div>
       </section>
 
-      <button onClick={clearAllInputs} title="Limpar todos os campos">
+      <button onClick={clearAll} title="Limpar todos os campos">
         Limpar tudo
       </button>
     </>

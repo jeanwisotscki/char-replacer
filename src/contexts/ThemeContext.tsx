@@ -14,7 +14,7 @@ export type ThemeContextType = {
 export const ThemeContext = React.createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider = ({ children }: IThemeProviderProps) => {
-  const [theme, setTheme] = React.useState<Theme>("light");
+  const [theme, setTheme] = React.useState<Theme>("dark");
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

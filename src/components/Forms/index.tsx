@@ -1,4 +1,5 @@
 import React from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 import styles from "./index.module.css";
 
@@ -15,10 +16,13 @@ export const Forms = () => {
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
+    toast.success("Texto copiado com sucesso!");
   };
 
   return (
     <>
+      <Toaster />
+
       <h2>Troque caracteres por outros</h2>
 
       <section className={styles.inputFields}>
@@ -32,6 +36,7 @@ export const Forms = () => {
             value={inputChars}
           />
         </div>
+
         <div>
           <label htmlFor="saida">Saída</label>
           <input
@@ -53,6 +58,7 @@ export const Forms = () => {
             value={enterText}
             onChange={(e) => setEnterText(e.target.value)}
           />
+
           <button
             onClick={() => copyToClipboard(enterText)}
             title="Copiar texto do campo"
@@ -60,6 +66,7 @@ export const Forms = () => {
             Copiar
           </button>
         </div>
+
         <div>
           <label>Texto de saída</label>
           <textarea
@@ -77,6 +84,7 @@ export const Forms = () => {
           </button>
         </div>
       </section>
+
       <button onClick={clearAllInputs} title="Limpar todos os campos">
         Limpar tudo
       </button>

@@ -18,10 +18,11 @@ function App() {
         <strong>Como usar?</strong>
         <p>
           Adicione o caractere ou a sequência de caracteres a serem substituídos
-          no campo <strong>"Entrada"</strong>, em seguida, adicione os que vão
+          no campo <strong>"Entrada"</strong>, em seguida, adicione os que irão
           substitui-los no campo <strong>"Saída"</strong>. Feito! Agora basta
-          digitar o seu texto no campo "Texto de entrada" e o resultado será
-          apresentado em tempo real no campo "Texto de saída".
+          digitar o seu texto no campo <strong>"Texto de entrada"</strong> e o
+          resultado será apresentado em tempo real no campo{" "}
+          <strong>"Texto de saída"</strong>.
         </p>
         <Forms />
       </Container>

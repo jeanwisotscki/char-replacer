@@ -1,6 +1,16 @@
 .main {
-  max-width: 70rem;
+  max-width: 60rem;
   width: 90%;
   min-height: calc(100vh - 4rem);
   margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+p {
+  text-align: justify;
+  margin: 0 0 1rem;
 }

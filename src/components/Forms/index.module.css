@@ -48,7 +48,11 @@
 
 .textFields div button {
   position: absolute;
-  right: 0;
+  top: 26px;
+  right: 2px;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 button {

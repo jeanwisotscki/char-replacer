@@ -1,6 +1,8 @@
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 
+import ClipboardIcon from "../../../public/assets/clipboard.svg";
+
 import styles from "./index.module.css";
 
 export const Forms = () => {
@@ -62,7 +64,12 @@ export const Forms = () => {
             onClick={() => copyToClipboard(enteredText)}
             title="Copiar texto do campo"
           >
-            Copiar
+            <img
+              src={ClipboardIcon}
+              width={20}
+              height={20}
+              alt="Clipboard icon"
+            />
           </button>
         </div>
 
@@ -73,7 +80,12 @@ export const Forms = () => {
             onClick={() => copyToClipboard(replacedText)}
             title="Copiar texto do campo"
           >
-            Copiar
+            <img
+              src={ClipboardIcon}
+              width={20}
+              height={20}
+              alt="Clipboard icon"
+            />
           </button>
         </div>
       </section>

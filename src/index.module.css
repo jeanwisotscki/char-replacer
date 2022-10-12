@@ -5,5 +5,15 @@
 
 .dark {
   background-color: #111;
-  color: #eee;
+  color: #fff;
+}
+
+.dark input {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark textarea {
+  background-color: #222;
+  color: #fff;
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { Forms } from "./components/Forms";
 import { Header } from "./components/Header";
 import { Container } from "./components/Container";
+
 import { ThemeContext, ThemeContextType } from "./contexts/ThemeContext";
 
 import styles from "./index.module.css";
@@ -21,7 +22,7 @@ function App() {
           no campo <strong>"Entrada"</strong>, em seguida, adicione os que irão
           substitui-los no campo <strong>"Saída"</strong>. Feito! Agora basta
           digitar o seu texto no campo <strong>"Texto de entrada"</strong> e o
-          resultado será apresentado em tempo real no campo{" "}
+          resultado será apresentado em tempo real no campo
           <strong>"Texto de saída"</strong>.
         </p>
         <Forms />

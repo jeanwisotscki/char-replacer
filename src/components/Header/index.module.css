@@ -1,7 +1,18 @@
 .header {
+  max-width: 70rem;
   height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
   padding: 0 2rem;
+}
+
+.header strong {
+  font-size: 1.5rem;
+  cursor: default;
+  user-select: none; /* Standard */
+  -ms-user-select: none; /* IE10+/Edge */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari */
 }

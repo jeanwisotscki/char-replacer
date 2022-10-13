@@ -1,19 +1,23 @@
 .light {
   background-color: #fff;
   color: #333;
+  transition: ease-in-out 0.3s;
 }
 
 .dark {
   background-color: #111;
   color: #fff;
+  transition: ease-in-out 0.3s;
 }
 
 .dark input {
   background-color: #222;
   color: #fff;
+  border: 1px solid transparent !important;
 }
 
 .dark textarea {
   background-color: #222;
   color: #fff;
+  border: none;
 }

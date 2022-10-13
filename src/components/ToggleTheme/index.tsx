@@ -11,8 +11,14 @@ export const ToggleTheme = () => {
   ) as ThemeContextType;
 
   function handleToggleTheme() {
-    if (theme === "light") return setTheme("dark");
+    if (theme === "light") {
+      setTheme("dark");
+      localStorage.setItem("@theme", "dark");
+      return;
+    }
+
     setTheme("light");
+    localStorage.setItem("@theme", "light");
   }
 
   return (

@@ -14,7 +14,16 @@ export type ThemeContextType = {
 export const ThemeContext = React.createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider = ({ children }: IThemeProviderProps) => {
-  const [theme, setTheme] = React.useState<Theme>("dark");
+  const [theme, setTheme] = React.useState<Theme>("light");
+
+  React.useEffect(() => {
+    const actualThemeInStorage = localStorage.getItem("@theme");
+
+    if (!actualThemeInStorage) return localStorage.setItem("@theme", "light");
+
+    if (actualThemeInStorage === "light" || actualThemeInStorage === "dark")
+      return setTheme(actualThemeInStorage);
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

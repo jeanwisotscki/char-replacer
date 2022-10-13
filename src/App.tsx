@@ -16,13 +16,13 @@ function App() {
       <Header />
       <Container>
         <h2>Substitua um ou mais caracteres por outros</h2>
-        <strong>Como usar?</strong>
+        <h3>Como usar?</h3>
         <p>
           Adicione o caractere ou a sequência de caracteres a serem substituídos
-          no campo <strong>"Entrada"</strong>, em seguida, adicione os que irão
+          no campo <strong>"Entrada"</strong>, em seguida adicione os que irão
           substitui-los no campo <strong>"Saída"</strong>. Feito! Agora basta
           digitar o seu texto no campo <strong>"Texto de entrada"</strong> e o
-          resultado será apresentado em tempo real no campo
+          resultado será apresentado em tempo real no campo{" "}
           <strong>"Texto de saída"</strong>.
         </p>
         <Forms />

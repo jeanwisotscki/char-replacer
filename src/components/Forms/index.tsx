@@ -90,7 +90,11 @@ export const Forms = () => {
         </div>
       </section>
 
-      <button onClick={clearAll} title="Limpar todos os campos">
+      <button
+        className={styles.clearAllBtn}
+        onClick={clearAll}
+        title="Limpar todos os campos"
+      >
         Limpar tudo
       </button>
     </>

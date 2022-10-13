@@ -48,14 +48,20 @@
 
 .textFields div button {
   position: absolute;
-  top: 26px;
-  right: 2px;
+  top: 22px;
+  right: 4px;
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
-button {
+.clearAllBtn {
+  background: none;
+  color: inherit;
   font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-color: inherit;
+  border-radius: 4px;
   cursor: pointer;
 }

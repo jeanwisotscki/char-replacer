@@ -1,15 +1,15 @@
 import React from "react";
 
-interface IThemeProviderProps {
-  children: React.ReactNode;
-}
-
-export type Theme = "light" | "dark";
+type Theme = "light" | "dark";
 
 export type ThemeContextType = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
 };
+
+interface IThemeProviderProps {
+  children: React.ReactNode;
+}
 
 export const ThemeContext = React.createContext<ThemeContextType | null>(null);
 

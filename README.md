@@ -2,7 +2,7 @@
 
 Feito como projeto de estudo.
 
-Confira o resultado [clicando aqui.](https://jeanwisotscki.github.io/intro-section-with-dropdown/) (Dica: segure Ctrl ao clicar para abrir em uma nova guia 😉)
+Confira o resultado [clicando aqui.](https://char-replacer.vercel.app/) (Dica: segure Ctrl ao clicar para abrir em uma nova guia 😉)
 
 ## Design
 

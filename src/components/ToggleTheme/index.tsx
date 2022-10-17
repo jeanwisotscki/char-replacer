@@ -30,6 +30,8 @@ export const ToggleTheme = () => {
         outline: "none",
         border: "none",
         cursor: "pointer",
+        userSelect: "none" /* Standard */,
+        msUserSelect: "none" /* IE10+/Edge */,
       }}
     >
       <img

@@ -11,6 +11,10 @@ import styles from "./index.module.css";
 function App() {
   const { theme } = React.useContext(ThemeContext) as ThemeContextType;
 
+  console.log(
+    "Desenvolvido por Jean Wisotscki \nLINKEDIN: https://www.linkedin.com/in/jean-wisotscki/"
+  );
+
   return (
     <div className={theme === "light" ? styles.light : styles.dark}>
       <Header />
